@@ -1,0 +1,18 @@
+<h1>Results</h1>
+
+<!-- Here's where we pick up the @congress variable we
+     created in congress.rb ...
+
+     For each congressman (item) in our array
+     (@congress["results"]), display the following...
+
+     (Remember, @congress is a hash, but @congress["results"]
+     is an array.)
+-->
+
+<% @congress["results"].each do |item| %>
+  <div>
+    <p><%= item["first_name"] %></p>
+    <p><%= item["last_name"] %></p>
+  </div>
+<% end %>

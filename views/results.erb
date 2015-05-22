@@ -12,7 +12,13 @@
 
 <% @congress["results"].each do |item| %>
   <div>
-    <p><%= item["first_name"] %></p>
-    <p><%= item["last_name"] %></p>
+    <p><%= item["title"] %>
+    <%= item["first_name"] %>
+    <%= item["last_name"] %></br>
+    Party: (<%= item["party"] %>)</br>
+    Phone: <%= item["phone"] %></br>
+    Email: <%= item["oc_email"] %></br>
+    Twitter: <%= item["twitter_id"] %></br>
+  </p>
   </div>
 <% end %>

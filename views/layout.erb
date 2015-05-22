@@ -1,15 +1,59 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <meta charset="UTF-8" />
+    <title>Local Congress App </title>
+    <style>
+
+      body {
+        font-size: 16px;
+        font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        line-height: 1.5;
+        background: url("/images/background.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      
+        
+
+    
+
+      #container {
+        max-width: 600px;
+        /* When we use the max-width property, we're telling the
+           browser to not let our content stretch beyond the
+           value specified.
+
+           This provides us with flexibility to set space for our
+           content in a design, but also make it elastic if the
+           viewport is smaller than the alotted space. */
+        margin: 5em auto 0 auto;
+        padding: 1em;
+        border: 1px solid #ccc;
+        /* We're setting padding and border solely for visualization
+           purposes. */
+        background: rgba(255,255,255,0.75);
+      }
+
+      
+      
+    </style>
   </head>
 
   <body>
-    <!-- 'yield' will automatically call the erb file
-         specified in congress.rb.
 
-         i.e. 'not_found' will return oops.erb
-    -->
-    <%= yield %>
+    <div id="container">
+    <!-- Because div is a generic element, it is perfect to use as a
+         'container' - - we're not describing any content, and yet
+         we can apply styles to it. -->
+
+      <header>
+        <h1>Who's your local Congressman?</h1>
+      </header>
+
+      <main>
+        <%= yield %>
+      </main>
+    </div>
   </body>
 </html>

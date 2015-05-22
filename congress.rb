@@ -6,7 +6,7 @@ class RepFinder
 
   # when we create a new instance of RepFinder, we pass it the zip code
   def initialize(zip)
-    @api_key = "" # remember to add your API key!
+    @api_key = "e8863bbca4774d588ff7b952acf3a1fd" # remember to add your API key!
     @zip = zip
   end
 
